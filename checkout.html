@@ -1,0 +1,125 @@
+
+<html>
+<head>
+    <title>Checkout</title>
+
+    <link href="Styles/stylesheet.css" rel="Stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <header>
+            <nav>
+                <div id="logoSection">
+                <a href="index.html">
+                    <img id="logo" src="Images/logo.jpg" alt="Gazankulu's flag as a logo">
+                </a>
+                <h6 id="tagline">Mintirho Ya Vulavula</h6>
+                </div>
+
+                <div id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="art.html">Art</a>
+                <a href="details.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                </div>
+            </nav>  
+        </header>
+
+    <main>
+        <form class="contact-form">
+        <fieldset id="checkout">
+            <legend> <h2>🛒Checkout</h2> </legend>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Nsovo Maswanganyi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. nsovo@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" name="address" rows="5" placeholder="Enter delivery address here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="artTitle">Artwork Title</label>
+                    <select name="artTitle" id="artTitle" onchange="toggleSelect()">
+                        <option value="select">Select</option>
+                        <option value="maizesilo">Maize Silo</option>
+                        <option value="tanzanian-slaves">Tanzanian Slavaes</option>
+                        <option value="The Rhonga's grave">The Rhonga's grave</option>
+                        <option value="Sokisi's grave">Sokisi's grave</option>
+                        <option value="King Sunduza and his council">King Sunduza and his council</option>
+                        <option value="King Muhlava's House">King Muhlava's House</option>
+                        <option value="A woman and a pack of wood">A woman and a pack of wood</option>
+                        <option value="The Tsonga Container">The Tsonga Container</option>
+                        <option value="Xitsonga Beads">Xitsonga Beads</option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount (ZAR)</label>
+                    <input type="text" id="amount" name="amount" value="R12,000">
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="radio-group">
+                        <input type="radio" name="payment" value="card" id="card" onclick="toggleCardDetails()"> Credit/Debit Card
+                        <input type="radio" name="payment" value="eft" id="eft" onclick="toggleCardDetails()"> Bank EFT
+                        <input type="radio" name="payment" value="cash" id="cash" onclick="toggleCardDetails()"> Cash on Delivery
+                    </div>
+                </div>
+            <!-- Card Selection -->
+            <div id="cardSection" class="card-details">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 4111 1111 1111 1111">
+                </div>
+
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="e.g. 123">
+                </div>
+
+            </div>
+            <a href="confirm.html"> <button type="button" id="placeOrder">Place Order</button></a>
+        </fieldset>
+    </form>
+
+    </main>
+
+        <footer>
+            <div class="left">
+                <a href="terms.html">Terms and Conditions</a>
+                <br>
+                <a href="references.html">References</a>
+            </div>
+
+            <div class="centre">
+                <a href="index.html">
+                    <img id="footer-logo" src="Images/logo.jpg" alt="Gazankulu's flag as a logo">
+                </a>
+                <br>
+                <p>Created by Nsovo W. Maswanganyi, 2025</p>
+            </div>
+
+            <div class="right">
+                <a href="Plagiarism.html">Plagiarism Declaration</a>
+            </div>
+        </footer>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="Scripts/script.js" type="text/javascript"></script>
+</body>
+</html>
